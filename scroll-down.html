@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Page Scroll Down Indicator</title>
+      <link rel="stylesheet" href="css/scroll-down/style.css">
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   </head>
+   <body>
+      <nav>
+         <label>Coding<span>Nepal</span></label>
+         <div class="scroll-line"></div>
+      </nav>
+      <div class="content">
+
+      </div>
+      <script>
+         $(document).ready(function(){
+           $(window).scroll(function(){
+             var windowTop = $(window).scrollTop(),
+             documentHeight = $(document).height(),
+             windowHeight = $(window).height();
+             var scroll = (windowTop / (documentHeight - windowHeight))*100;
+             $('.scroll-line').css("width", (scroll + '%'));
+           });
+         });
+      </script>
+   </body>
+</html>
