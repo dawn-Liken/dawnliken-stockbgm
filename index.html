@@ -145,6 +145,9 @@
             background: linear-gradient(287.96deg, rgba(0, 0, 0, 0.16) 15.1%, rgba(0, 0, 0, 0) 83.32%), #27914f;
             color:#FFFFFF;
         }
+        .login-btn {
+            color:#FFFFFF;
+        }
         .wrap {
             width: 320px;
             margin: 30px auto 0px auto;
@@ -227,6 +230,32 @@
             border-radius: 4px;
             padding: 5px 4px 5px 4px;
         }
+        .login-btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            gap: 7px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-decoration-color: #222222;
+        }
+        .login-btn > a {
+            width: 102px;
+            height: 48px;
+            border-radius: 80px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            box-shadow: 3px 3px 5px 0px black;
+        }
+        .login-btn > a:hover {
+                    background-color: #33b966;
+                    font-size: 12.5px;
+                }
         .alarm {
             color : #474747;
             font-size: 16px;
@@ -253,7 +282,9 @@
         <div class="pro">
             <div class="profile"></div>
         </div>
-        <a class="통합 로그인" target="_blank" href="login.html"><button>던라이큰-스톡비잼</button>             </a>
+        <div class="login-btn">
+            <a class="통합 로그인" target="_blank" href="login.html">회원가입/로그인             </a>
+        </div>
         <div class="headcopy1">
             <h1 class="main1">던라이큰<br>dawnLiken</h1>
             <p class="sub1">최고의<br>뮤직 크리에이션 서비스<br>던라이큰 입니다.</p>
