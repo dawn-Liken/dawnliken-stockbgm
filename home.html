@@ -2,7 +2,7 @@
 <html lang="ko" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <title>Bgm 중개 서비스 스톡비잼</title>
+      <title>스톡비잼</title>
       <link rel="stylesheet" href="css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -34,13 +34,116 @@
             <button type="submit" class="fas fa-search"></button>
          </form>
       </nav>
-      <div class="content">
-         <header class="space">크리에이터 맞춤 제작 기반 Bgm NFT 거래 플랫폼</header>
-        <br>
-         <div class="space text">
-            당신의 음악을 판매하세요!
-         </div>
-      </div>
+
+      <style>
+         body{margin: 0;}
+  
+         /* header 영역 */
+         header{
+             height: 500px;
+             background-color: rgb(150, 150, 150);
+             display: flex;
+             flex-direction: column; /*수직 배치*/
+             align-items: center;
+             justify-content: center;
+  
+             color: white;
+         }
+  
+         /* navigation bar */
+          #container{
+              display: flex;
+              flex-wrap: wrap;
+          }
+  
+          /* 왼쪽 사이드 */
+          aside{
+              flex-grow: 3;
+              background-color: #f1f1f1;
+              padding: 20px;
+          }
+          article{
+              flex: 7;
+              background-color: white;
+              padding: 20px;
+          }
+  
+          .fakeimg{
+              background: #aaaaaa;
+              width: 100%;
+              padding: 20px;
+          }
+          footer{
+              padding: 8px;
+              text-align: center;
+              background: rgb(221, 221, 221);
+          }
+  
+          /* 반응형 웹 */
+          @media all and (max-width: 600px){
+             #container, nav{
+                 flex-direction: column;
+             }
+          }
+  
+     </style>
+  
+ </head>
+ <body>
+     <!-- notice 영역 -->
+     <div style="background-color: rgb(101, 74, 255); padding: 5px;">
+         <h4 style="text-align: center;">공지 영역</h4>
+     </div>
+  
+     <!-- header 영역 -->
+     <header>
+         <h1>스톡비잼</h1>
+         <p>크리에이터 맞춤 제작 기반 <strong>BGM 거래</strong> 서비스</p>
+     </header>
+  
+     <!-- 콘텐츠 영역 -->
+     <div id="container">
+         <!-- 왼쪽 사이드 -->
+         <aside>
+             <h2>About Me</h2>
+             <h5>Photo of me:</h5>
+             <div class="fakeimg" style="height: 200px;">Image</div>
+             <p>Some text about me</p>
+  
+             <h3>More Text</h3>
+             <p>This is text region</p>
+             <div class="fakeimg" style="height: 60px;">Image</div>
+             <div class="fakeimg" style="height: 60px;">Image</div>
+             <div class="fakeimg" style="height: 60px;">Image</div>
+  
+         </aside>
+         <!-- 본문 영역 -->
+         <article>
+             <h2>TITLE HEADING</h2>
+             <h5>title description, Dec,7, 2019</h5>
+             <div class="fakeimg" style="height: 200px;">Image</div>
+             <p>Some text ...</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sint odio nesciunt qui incidunt assumenda similique, quisquam amet dolor esse explicabo quam voluptatibus velit odit error cumque cum rem aspernatur!</p>
+  
+  
+             <h2>TITLE HEADING</h2>
+             <h5>title description, Dec,7, 2019</h5>
+             <div class="fakeimg" style="height: 200px;">Image</div>
+             <p>Some text ...</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sint odio nesciunt qui incidunt assumenda similique, quisquam amet dolor esse explicabo quam voluptatibus velit odit error cumque cum rem aspernatur!</p>
+  
+         </article>
+  
+     </div>
+  
+     <!-- footer -->
+     <footer>
+        <p>Copyright © 2021 dawnLiken All rights reserved.</p>
+        <address>Contact webmaster for more information. 010-3924-3590</address>
+    </footer>
+  
+ </body>
+ </html>
       <script>
          const menuBtn = document.querySelector(".menu-icon span");
          const searchBtn = document.querySelector(".search-icon");
