@@ -2,69 +2,10 @@
 <html lang="ko" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>던라이큰(dawnLiken)</title>
       <link rel="stylesheet" href="css/dawnliken-index/style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="https://code.jquery.com/jquery-latest.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
-      <script src=".chat/public/script.js"></script>
-  
-      <script>
-        $(document).ready(()=>{
-          loadMsgs();
-  
-          $("#btn").on("click",()=>{
-            sendMsg();
-          });
-  
-          $("#message").keydown((key)=>{
-            if(key.keyCode == 13){ sendMsg() };
-  
-          })
-  
-        });
-  
-      </script>
-  
-      <style>
-        #container {
-          border:1px solid black;
-          width:100%;
-        }
-  
-        #header {
-          border:1px solid black;
-          text-align: center;
-          width:100%;
-        }
-  
-        #chatlist {
-          height:500px;
-          width:100%;
-          overflow: scroll;
-        }
-  
-        #bottom {
-          border:1px solid black;
-          height:20px;
-        }
-  
-        #btn {
-          float:right;
-          width:14%;
-          color:white;
-          background-color: black;
-        }
-  
-        #message {
-          float:left;
-          width:84%;
-        }
-  
-      </style>
    </head>
    <body>
       <nav>
@@ -85,22 +26,12 @@
          </ul>
       </nav>
       <div class="content">
-<html>
-  <body>
-    <div id="container">
-        <div id="header">
-            던라이큰-스톡비잼
-        </div>
-        <div id="chatlist">
-        </div>
-        <div id="bottom">
-            <input id="message" type="text" name="message" placeholder="내용입력">
-            <div id="btn">보내기</div>
-        </div>
-    </div>
-  </body>
-</html>
-
+         <div>
+            궁금증, 고민 나누어보세요!
+         </div>
+         <div>
+            던라이큰 커뮤니티
+         </div>
       </div>
    </body>
 </html>
