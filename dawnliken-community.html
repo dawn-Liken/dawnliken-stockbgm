@@ -2,36 +2,82 @@
 <html lang="ko" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <title>던라이큰(dawnLiken)</title>
-      <link rel="stylesheet" href="css/dawnliken-index/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <title>던라이큰</title>
+      <link rel="stylesheet" href="css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
    </head>
    <body>
       <nav>
+         <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+         </div>
          <div class="logo">
             dawnLiken
          </div>
-         <input type="checkbox" id="click">
-         <label for="click" class="menu-btn">
-         <i class="fas fa-bars"></i>
-         </label>
-         <ul>
-            <li><a href="dawnliken-index.html">홈</a></li>
+         <div class="nav-items">
+            <li><a href="dawnliken-index.html">홈으로</a></li>
             <li><a href="dawnliken-portfolio.html">포트폴리오</a></li>
             <li><a href="dawnliken-recruit.html">구인/구직</a></li>
             <li><a href="dawnliken-publish.html">음원 발매</a></li>
             <li><a href="dawnliken-career.html">커리어</a></li>
-            <li><a class="active" href="dawnliken-community.html">커뮤니티</a></li>
-         </ul>
+            <li><a href="chat/public/chat.html">커뮤니티</a></li>
+         </div>
+         <div class="search-icon">
+            <span class="fas fa-search"></span>
+         </div>
+         <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+         </div>
+         <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+         </form>
       </nav>
-      <div class="content">
-         <div>
-            궁금증, 고민 나누어보세요!
+        
+         <div id="content">
+            <div>
+               궁금증, 고민 나누어 보세요!
+            </div>
+            <div>
+               던라이큰 커뮤니티
+            </div>
+
          </div>
-         <div>
-            던라이큰 커뮤니티
-         </div>
-      </div>
+
    </body>
-</html>
+
+     <!-- footer -->
+     <footer>
+        <p>Copyright © 2022 dawnLiken All rights reserved.</p>
+        <address>Contact webmaster for more information. 010-3924-3590</address>
+    </footer>
+  
+    <script>
+      const menuBtn = document.querySelector(".menu-icon span");
+      const searchBtn = document.querySelector(".search-icon");
+      const cancelBtn = document.querySelector(".cancel-icon");
+      const items = document.querySelector(".nav-items");
+      const form = document.querySelector("form");
+      menuBtn.onclick = ()=>{
+        items.classList.add("active");
+        menuBtn.classList.add("hide");
+        searchBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+      }
+      cancelBtn.onclick = ()=>{
+        items.classList.remove("active");
+        menuBtn.classList.remove("hide");
+        searchBtn.classList.remove("hide");
+        cancelBtn.classList.remove("show");
+        form.classList.remove("active");
+        cancelBtn.style.color = "#ff3d00";
+      }
+      searchBtn.onclick = ()=>{
+        form.classList.add("active");
+        searchBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+      }
+   </script>
+
+ </html>

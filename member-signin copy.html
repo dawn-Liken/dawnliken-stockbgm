@@ -9,16 +9,11 @@
 
 <style>
     #form {
-        position: absolute;
-        padding: 20px;
-        width: 300px;
-        background-color: #EEEFF1;
-        border: 2px solid rgb(122, 122, 122);
-        border-radius: 20px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        border-radius: 30px;
+        background-color: rgb(236, 236, 236);
+        border:2px solid rgb(73, 126, 73)
     }
+
 
     #title {
         width:100%;
@@ -35,45 +30,30 @@
         justify-content: center;
         align-items: center;
     }
-
-    #input {
-        text-align: end;
-    }
-
-    #btn1 {
-        display: flex;
-        justify-content: center;
-        margin-right: -5px
-    }
-
-    #btn2 {
-        display: flex;
-        justify-content: center;
-        margin-left: 5px;
-    }
 </style>
 
 <body>
     <form id="form">
-        <h1 id="title">통합 회원가입</h1>
+        <h1 id="title">던라이큰-스톡비잼 통합 회원가입</h1>
         <div id="content">
-            <div id="input">
-                <div> 계정 : <input type="email" id="signUpEmail" placeholder="계정을 입력하세요" /></div>
-                <br>
-                <div> 비밀번호 : <input type="password" id="signUpPassword" placeholder="비밀번호를 입력하세요"/></div>
-            </div>
-            <br>
-            <div id="btn1">
-                <button type="submit" id="signUpButton" >회원가입 하기</button>
-            </div>
-            <br>
-            <div id="btn2">
-                <button type="button" onclick="location.href='member-login.html';">로그인 하러 가기</button>
-            </div>
+            <div> email : <input type="email" id="signUpEmail" /></div>
+            <div> password : <input type="password" id="signUpPassword" /></div>
+            <button type="submit" id="signUpButton" >회원가입 하기</button>
+            <button >로그인 하러 가기</button>
         </div>
-
+        
     </form>
-
+    <br>
+    <form id="form">
+        <h1 id="title">로그인</h1>
+        <div id="content">
+            <div> email : <input type="email" id="signInEmail" /></div>
+            <div> password : <input type="password" id="signInPassword" /></div>
+            <button type="submit" id="signInButton" >로그인 하기</button>
+            <button >회원가입 하러 가기</button>
+        </div>
+        
+    </form>
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
@@ -118,6 +98,25 @@
                     const errorCode = error.code;
                     const errorMessage = error.message;
                     // ..
+                });
+
+        })
+
+        document.getElementById('signInButton').addEventListener('click', (event) => {
+            event.preventDefault()
+            const signInEmail = document.getElementById('signInEmail').value
+            const signInPassword = document.getElementById('signInPassword').value
+            signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+                .then((userCredential) => {
+                    // Signed in 
+                    console.log(userCredential)
+                    const user = userCredential.user;
+                    // ...
+                })
+                .catch((error) => {
+                    console.log('로그인 실패')
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
                 });
 
         })
